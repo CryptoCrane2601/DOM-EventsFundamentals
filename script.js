@@ -27,6 +27,7 @@ document.querySelector('.check').addEventListener('click', function () {
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
+    } else if (guess !== secretNumber) {
     }
   } else if (guess > secretNumber) {
     if (score > 1) {
@@ -49,6 +50,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+// Restart the game
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
